@@ -1,0 +1,124 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   height: 100%;
+}
+
+.main {
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+   }
+   &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      bottom: -90px;
+      left: 0;
+      z-index: 4;
+      filter: blur(10px);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 1) 60%, rgba(54, 54, 54, 1) 100%);
+   }
+   video {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+   }
+   .content {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      color: #fff;
+      .title {
+         text-align: center;
+         font-size: 100px;
+         font-weight: 500;
+      }
+      .swiper {
+         max-width: 800px;
+         height: 200px;
+         .swiper-slide {
+            font-size: 24px;
+            letter-spacing: 0.8px;
+            line-height: 120%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+         }
+      }
+   }
+}
+.cont {
+   max-width: 1030px;
+   margin: 0px auto;
+   padding: 0 15px;
+}
+.text {
+   position: relative;
+   z-index: 2;
+   padding: 140px 0 100px;
+   background: url("/img/earth-text.png") 100% no-repeat;
+   &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+   }
+   .text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      .text-title {
+         text-align: center;
+         font-size: 30px;
+         color: #fff;
+         letter-spacing: 0.5px;
+         line-height: 120%;
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
+      P {
+         font-size: 20px;
+         color: #fff;
+         letter-spacing: 0.5px;
+         line-height: 120%;
+      }
+   }
+}
+.earth-game {
+   width: 100%;
+   .sketchfab-embed-wrapper {
+      height: 100vh;
+      iframe {
+         width: 100%;
+         height: 100%;
+      }
+   }
+}
