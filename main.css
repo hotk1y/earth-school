@@ -80,7 +80,7 @@ body {
   position: relative;
   z-index: 2;
   padding: 140px 0 100px;
-  background: url("/img/earth-text.png") 100% no-repeat;
+  background: url("img/earth-text.png") 100% no-repeat;
 }
 .text::after {
   content: "";
